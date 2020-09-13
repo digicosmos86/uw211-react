@@ -6,5 +6,20 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: "United Way of Rhode Island | 211 Dashboard"
+  },
+  plugins: [
+    'gatsby-plugin-webpack-bundle-analyser-v2',
+    `gatsby-plugin-fontawesome-css`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [
+          require("tailwindcss"),
+          require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
+        ],
+      },
+    },
+  ],
 }

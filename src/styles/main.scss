@@ -1,0 +1,184 @@
+@tailwind base;
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://use.typekit.net/hek7leu.css);
+
+@tailwind components;
+@tailwind utilities;
+
+#charts {
+  @apply px-8;
+  max-width: 1200px;
+}
+
+#chart {
+  min-width: 370px;
+  max-width: 750px;
+  padding: 0;
+  flex: 60%;
+}
+
+#map {
+  min-width: 300px;
+  flex: 40%;
+}
+
+#svg_chart .legendtext {
+  color: #222;
+  font-size: 0.6rem;
+}
+
+#show_minor a {
+  color: #222;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0 0 3px 5px;
+  cursor: pointer;
+}
+
+#show_minor a:hover {
+  color: #fe230a;
+  fill: #fe230a;
+}
+
+#chart_tooltip {
+  visibility: hidden;
+  position: absolute;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#chart_tooltip h6 {
+  font-size: 0.9rem;
+  font-style: none;
+  font-weight: bold;
+  padding: 5px 5px 5px 0px;
+  margin: 0px;
+}
+
+.legend_title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+#stack .area:hover {
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+
+#guide {
+  visibility: hidden;
+}
+
+#guide circle {
+  r: 3px;
+  stroke: #333;
+  stroke-width: 1px;
+  cursor: pointer;
+
+  &:hover {
+    r: 5px;
+    stroke: #ccc;
+  }
+}
+
+#guide line {
+  stroke: #333;
+  stroke-width: 1px;
+}
+
+#x_axis,
+#y_axis {
+  font-size: 0.8rem;
+}
+
+.city {
+  stroke: #bbb;
+  stroke-width: 1;
+  cursor: pointer;
+}
+
+.city:hover {
+  fill: #fe230a;
+  transition: fill 0.5s;
+}
+
+.tooltip {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 6px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 10;
+  visibility: hidden;
+  color: white;
+  font-family: sans-serif;
+  font-size: 1rem;
+  text-align: left;
+}
+
+#svg_map .legendtext {
+  color: #222;
+  font-size: 0.6rem;
+}
+
+#legend_wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  color: #222;
+  font-size: 0.9rem;
+  padding: 5px 0;
+  margin: 0;
+}
+
+#legend {
+  text-align: right;
+  width: max-content;
+  font-size: 0.8rem;
+}
+
+table tr td {
+  padding: 0;
+  margin: 0;
+}
+
+.row_header {
+  font-weight: bold;
+  width: 160px;
+}
+
+.legend_span {
+  display: inline-block;
+  width: 25px;
+  margin-top: 10px;
+  height: 10px;
+  border: 1px solid #bbb;
+}
+
+#legend_text_wrapper {
+  display: flex;
+  flex: row wrap;
+  justify-content: space-between;
+}
+
+#all_areas a {
+  color: #222;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0 0 3px 5px;
+  cursor: pointer;
+}
+
+#all_areas a:hover {
+  color: #fe230a;
+  fill: #fe230a;
+}
+
+#all_areas i {
+  padding: 0 5px;
+}
