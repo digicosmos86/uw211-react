@@ -7,7 +7,7 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import InputSelect from "../components/select"
 import DatePick from "../components/pickdate"
-import Chart from "../components/stacked"
+import StackedChart from "../components/stacked"
 import MapRI from "../components/mapRI"
 import {
   dateRangeOptions,
@@ -162,7 +162,7 @@ export default function Home() {
       { dataReady ?
       (
         <section id="charts" className="flex flex-row flex-wrap items-stretch mx-auto px-6 mt-8">
-          <Chart title="What were the calls about?" filter={filterState} setFilterState={setFilterState} data={data} />
+          <StackedChart title="What were the calls about?" filter={filterState} setFilterState={setFilterState} data={data} />
           <MapRI title="Where did the calls come from?" filter={filterState} setFilterState={setFilterState} data={data} mapShape={mapShape} pops={riPops} />
         </section>
       ) : ""}
